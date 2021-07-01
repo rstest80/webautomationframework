@@ -12,13 +12,13 @@ public class LoginPage {
 	}
 	
 	//@FindBy(linkText = "https://ui.cogmento.com") WebElement logIn;
-	@FindBy(xpath = ".//div[@class='rd-navbar-wrap']/a") WebElement logIn;
-	@FindBy(name = "email") WebElement uname;
+	//@FindBy(xpath = ".//div[@class='rd-navbar-wrap']/a") WebElement logIn;
+	@FindBy(name = "username") WebElement uname;
 	@FindBy(name = "password") WebElement pass;
-	@FindBy(xpath = ".//div[@class='ui fluid large blue submit button']") WebElement loginButton;
+	@FindBy(xpath = ".//div[@class='input-group-btn']/input") WebElement loginButton;
 	
 	public void loginToCRM(String applicationUsername, String applicationPassword) {
-		logIn.click();
+		//logIn.click();
 		uname.sendKeys(applicationUsername);
 		pass.sendKeys(applicationPassword);
 		loginButton.click();
